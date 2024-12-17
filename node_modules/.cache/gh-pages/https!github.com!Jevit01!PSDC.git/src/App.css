@@ -1,0 +1,289 @@
+/* General Variables */
+:root {
+  --primary-color: #1e90ff;
+  --secondary-color: #f6be91;
+  --accent-color: #2a9d8f;
+  --background-color: #f4f4f9;
+  --text-color-light: #ffffff;
+  --text-color-dark: #1b1b1b;
+  --font-family-primary: "Playfair Display", serif;
+  --font-family-secondary: "Roboto", sans-serif;
+  --font-size-base: 16px;
+  --font-size-small: 14px;
+  --font-size-large: 36px;
+  --header-height: 120px;
+  --logo-size: 80px;
+  --border-radius: 12px;
+  --container-width: 1200px;
+  --gutter: 20px;
+  --transition-speed: 0.4s;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-base);
+  color: var(--text-color-dark);
+  background-color: var(--background-color);
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* Header Section */
+.header {
+  background-color: var(--primary-color);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--gutter);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: var(--logo-size);
+  width: auto;
+  transition: transform var(--transition-speed) ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* About Section */
+.about {
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0; /* Reduced padding to make section shorter */
+}
+
+.about-content-box {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--text-color-light);
+  padding: 30px; /* Reduced padding to make section shorter */
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content-box p {
+  font-family: var(--font-family-secondary);
+  font-size: 15px; /* Reduced font size */
+  line-height: 1.6; /* Reduced line height */
+}
+
+.about-content-box strong {
+  font-family: var(--font-family-primary);
+  font-weight: bold;
+}
+
+.about h2 {
+  font-family: var(--font-family-primary);
+  font-size: 30px; /* Reduced size */
+  margin-bottom: 10px; /* Less space between title and text */
+}
+
+/* Packages Section */
+.packages {
+  background-color: var(--secondary-color);
+  padding: 60px 0;
+}
+
+.packages h2 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-large);
+  margin-bottom: var(--gutter);
+  text-align: center;
+  color: var(--text-color-light);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card {
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 400px; /* Card height */
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7; /* Image opacity */
+  z-index: 1;
+}
+
+.basic-package::before {
+  background-image: url("./images/basic-package.jpg");
+}
+
+.standard-package::before {
+  background-image: url("./images/standard-package.jpg");
+}
+
+.premium-package::before {
+  background-image: url("./images/premium-package.jpg");
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  text-align: left; /* Aligned to the left */
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-family: var(--font-family-primary);
+  font-size: 26px;
+  color: var(--text-color-light) !important; /* White text */
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.card-content h4 {
+  font-family: var(--font-family-secondary);
+  font-size: 18px;
+  color: var(--text-color-light) !important; /* White text */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-family: var(--font-family-secondary);
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color-light) !important; /* White text */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.card-content ul {
+  list-style: disc;
+  padding-left: 20px; /* Added padding to move bullets to the left */
+}
+
+.card-content ul li {
+  font-size: 16px;
+  color: var(--text-color-light) !important; /* White text */
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Contact Section */
+.contact {
+  background-color: var(--accent-color);
+  color: var(--text-color-light);
+  padding: 60px 0;
+  border-radius: var(--border-radius);
+}
+
+.contact h2 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-large);
+  margin-bottom: var(--gutter);
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 14px;
+  margin-bottom: var(--gutter);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--accent-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  padding: 16px 32px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Footer Section */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  text-align: center;
+  padding: 40px 0;
+  border-top: 4px solid var(--accent-color);
+}
+
+.footer p {
+  font-size: var(--font-size-small);
+}
+
+/* Utility Classes */
+.content-align--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
