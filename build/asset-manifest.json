@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d971af32.css",
+    "main.js": "/static/js/main.7c6ce2f4.js",
+    "static/js/488.9c92ff38.chunk.js": "/static/js/488.9c92ff38.chunk.js",
+    "static/media/about-background.jpg": "/static/media/about-background.5c755ab90858b0bbf861.jpg",
+    "static/media/premium-package.jpg": "/static/media/premium-package.38df2baf3dacdb9f0eb8.jpg",
+    "static/media/basic-package.jpg": "/static/media/basic-package.22f20586f139f6850bcd.jpg",
+    "static/media/standard-package.jpg": "/static/media/standard-package.cdd498dc5b8e9d7fa76d.jpg",
+    "static/media/h2logo.png": "/static/media/h2logo.da34ac44d7e1f91cdc5e.png",
+    "index.html": "/index.html",
+    "main.d971af32.css.map": "/static/css/main.d971af32.css.map",
+    "main.7c6ce2f4.js.map": "/static/js/main.7c6ce2f4.js.map",
+    "488.9c92ff38.chunk.js.map": "/static/js/488.9c92ff38.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d971af32.css",
+    "static/js/main.7c6ce2f4.js"
+  ]
+}
