@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/PSDC/static/css/main.2594162d.css",
+    "main.css": "/PSDC/static/css/main.7a65ca88.css",
     "main.js": "/PSDC/static/js/main.90a25ee8.js",
     "static/js/488.9c92ff38.chunk.js": "/PSDC/static/js/488.9c92ff38.chunk.js",
     "static/media/about-background.jpg": "/PSDC/static/media/about-background.5c755ab90858b0bbf861.jpg",
@@ -9,12 +9,12 @@
     "static/media/standard-package.jpg": "/PSDC/static/media/standard-package.cdd498dc5b8e9d7fa76d.jpg",
     "static/media/h2logo.png": "/PSDC/static/media/h2logo.da34ac44d7e1f91cdc5e.png",
     "index.html": "/PSDC/index.html",
-    "main.2594162d.css.map": "/PSDC/static/css/main.2594162d.css.map",
+    "main.7a65ca88.css.map": "/PSDC/static/css/main.7a65ca88.css.map",
     "main.90a25ee8.js.map": "/PSDC/static/js/main.90a25ee8.js.map",
     "488.9c92ff38.chunk.js.map": "/PSDC/static/js/488.9c92ff38.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2594162d.css",
+    "static/css/main.7a65ca88.css",
     "static/js/main.90a25ee8.js"
   ]
 }
