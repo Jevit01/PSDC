@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import "./App.css";
-import logo from "./images/h2logo.png"; // Import logo from src/images
-import aboutBackground from "./images/about-background.jpg"; // Import background image
-import basicPackage from "./images/basic-package.jpg"; // Import basic package image
-import standardPackage from "./images/standard-package.jpg"; // Import standard package image
-import premiumPackage from "./images/premium-package.jpg"; // Import premium package image
+import logo from "./images/h2logo.png";
+import aboutBackground from "./images/about-background.jpg";
+import basicPackage from "./images/basic-package.jpg";
+import standardPackage from "./images/standard-package.jpg";
+import premiumPackage from "./images/premium-package.jpg";
 
 const Portfolio = () => {
   const form = useRef();
@@ -13,20 +13,31 @@ const Portfolio = () => {
   const sendEmail = e => {
     e.preventDefault();
 
+    // Simple validation to ensure all fields are filled
+    if (
+      !form.current.user_name.value ||
+      !form.current.user_email.value ||
+      !form.current.message.value
+    ) {
+      alert("Please fill out all fields before submitting.");
+      return;
+    }
+
     emailjs
       .sendForm(
-        "service_oe918jh",
-        "template_bkf3wtp",
+        "service_c1ert6i", // Service ID from EmailJS
+        "template_cqkwx68", // Template ID from EmailJS
         form.current,
-        "MNqCsy2SUwhD8R5sy"
+        "MNqCsy2SUwhD8R5sy" // Public Key from EmailJS
       )
       .then(
         result => {
           alert("Message Sent! We will get back to you soon.");
-          e.target.reset();
+          form.current.reset(); // Reset form on successful submission
         },
         error => {
-          alert("An error occurred, please try again.");
+          alert("An error occurred. Please try again later.");
+          console.error("EmailJS Error:", error.text); // Log the error for debugging
         }
       );
   };
@@ -80,14 +91,24 @@ const Portfolio = () => {
                 <h4>
                   Ideal for businesses starting their social media journey.
                 </h4>
+                <h4>Social Media Features</h4>
                 <ul>
                   <li>
-                    Management of 1-2 platforms (e.g., Facebook, Instagram)
+                    Management of 1-2 platforms (e.g., Facebook, Instagram).
                   </li>
-                  <li>8-10 posts/month (basic images/videos)</li>
-                  <li>Basic audience engagement strategy</li>
-                  <li>Monitoring/responding to basic messages and comments</li>
-                  <li>Monthly performance report</li>
+                  <li>8-10 posts/month (basic images/videos).</li>
+                  <li>Basic audience engagement strategy.</li>
+                  <li>Monitoring/responding to basic messages and comments.</li>
+                  <li>Monthly performance report.</li>
+                </ul>
+                <h4>Website Starter Package</h4>
+                <ul>
+                  <li>
+                    Custom-designed website (up to 5 pages: Home, About,
+                    Services, Contact, Blog).
+                  </li>
+                  <li>Mobile and SEO-friendly design.</li>
+                  <li>Basic contact form integration.</li>
                 </ul>
                 <p>
                   <strong>Price: $1,500.00 USD/month</strong>
@@ -107,14 +128,24 @@ const Portfolio = () => {
                 <ul>
                   <li>
                     Management of 2-3 platforms (e.g., Facebook, Instagram,
-                    LinkedIn)
+                    LinkedIn).
                   </li>
                   <li>
-                    12-15 posts/month with graphic design and optimized captions
+                    12-15 posts/month with graphic design and optimized
+                    captions.
                   </li>
-                  <li>Interactive content (polls, Q&A, stories)</li>
-                  <li>Competitor analysis and ad campaign management</li>
-                  <li>Monthly report with actionable insights</li>
+                  <li>Interactive content (polls, Q&A, stories).</li>
+                  <li>Competitor analysis and ad campaign management.</li>
+                  <li>Monthly report with actionable insights.</li>
+                </ul>
+                <h4>Website Growth Package</h4>
+                <ul>
+                  <li>Everything in Starter Package, plus:</li>
+                  <li>E-commerce functionality (up to 20 products).</li>
+                  <li>Blog setup with CMS.</li>
+                  <li>Social media integration.</li>
+                  <li>Enhanced SEO optimization.</li>
+                  <li>Delivery: 4-5 weeks.</li>
                 </ul>
                 <p>
                   <strong>Price: $1,900.00 USD/month</strong>
@@ -130,13 +161,23 @@ const Portfolio = () => {
                 <h3>Premium Package</h3>
                 <h4>Designed for brands seeking significant results.</h4>
                 <ul>
-                  <li>Management of up to 4 platforms (e.g., TikTok)</li>
+                  <li>Management of up to 4 platforms (e.g., TikTok).</li>
                   <li>
-                    20-25 high-quality posts/month (advanced designs/videos)
+                    20-25 high-quality posts/month (advanced designs/videos).
                   </li>
-                  <li>Advanced audience analysis and strategy</li>
-                  <li>Real-time monitoring and responses</li>
-                  <li>Comprehensive performance reporting with key metrics</li>
+                  <li>Advanced audience analysis and strategy.</li>
+                  <li>Real-time monitoring and responses.</li>
+                  <li>Comprehensive performance reporting with key metrics.</li>
+                </ul>
+                <h4>Comprehensive Solutions</h4>
+                <ul>
+                  <li>Everything in Growth Package, plus:</li>
+                  <li>Unlimited pages and e-commerce catalog.</li>
+                  <li>
+                    Custom integrations (e.g., booking systems, chatbots).
+                  </li>
+                  <li>Advanced SEO and analytics.</li>
+                  <li>Delivery: 6-8 weeks.</li>
                 </ul>
                 <p>
                   <strong>Price: $2,500.00 USD/month</strong>
