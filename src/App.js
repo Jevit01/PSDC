@@ -25,8 +25,8 @@ const Portfolio = () => {
 
     emailjs
       .sendForm(
-        "service_c1ert6i", // Service ID from EmailJS
-        "template_cqkwx68", // Template ID from EmailJS
+        "service_ym7b3np", // Service ID from EmailJS
+        "template_gi4g2cb", // Template ID from EmailJS
         form.current,
         "MNqCsy2SUwhD8R5sy" // Public Key from EmailJS
       )
