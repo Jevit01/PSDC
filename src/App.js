@@ -111,7 +111,7 @@ const Portfolio = () => {
                   <li>Basic contact form integration.</li>
                 </ul>
                 <p>
-                  <strong>Price: $1,500.00 USD/month</strong>
+                  <strong></strong>
                 </p>
               </div>
             </div>
@@ -148,7 +148,7 @@ const Portfolio = () => {
                   <li>Delivery: 4-5 weeks.</li>
                 </ul>
                 <p>
-                  <strong>Price: $1,900.00 USD/month</strong>
+                  <strong></strong>
                 </p>
               </div>
             </div>
@@ -180,7 +180,7 @@ const Portfolio = () => {
                   <li>Delivery: 6-8 weeks.</li>
                 </ul>
                 <p>
-                  <strong>Price: $2,500.00 USD/month</strong>
+                  <strong></strong>
                 </p>
               </div>
             </div>
