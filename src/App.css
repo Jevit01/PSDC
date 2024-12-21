@@ -1,4 +1,3 @@
-/* General Variables */
 :root {
   --primary-color: #1e90ff;
   --secondary-color: #f6be91;
@@ -129,9 +128,8 @@ img {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   position: relative;
-  width: 100%;
-  min-height: 400px;
-  height: auto;
+  width: calc(33.83% - 20px);
+  height: 600px;
   transition: all var(--transition-speed) ease-in-out;
 }
 
@@ -161,6 +159,17 @@ img {
   background-image: url("./images/premium-package.jpg");
 }
 
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Transparent black overlay */
+  z-index: 2;
+}
+
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
@@ -168,31 +177,16 @@ img {
 
 .card-content {
   position: relative;
-  z-index: 2;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
+  z-index: 3;
+  padding: 10px;
+  text-align: left;
+  color: var(--text-color-light);
 }
 
 .card-content h3 {
   font-family: var(--font-family-primary);
-  font-size: 26px;
-  color: var(--text-color-light);
-  margin-bottom: 10px;
-}
-
-.card-content h4 {
-  font-family: var(--font-family-secondary);
   font-size: 18px;
-  color: var(--text-color-light);
-  margin-bottom: 10px;
-}
-
-.card-content p {
-  font-family: var(--font-family-secondary);
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--text-color-light);
+  margin-bottom: 5px;
 }
 
 .card-content ul {
@@ -201,9 +195,8 @@ img {
 }
 
 .card-content ul li {
-  font-size: 16px;
-  color: var(--text-color-light);
-  margin-bottom: 8px;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 /* Contact Section */
